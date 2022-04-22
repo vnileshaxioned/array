@@ -1,7 +1,6 @@
 <?php
 
 $temperature = array(78, 60, 62, 68, 71, 68, 73, 85, 66, 64, 76, 63, 75, 76, 73, 68, 62, 73, 72, 65, 74, 62, 62, 65, 64, 68, 73, 75, 79, 73);
-$avg_temp = 70.6;
 
 for ($i = 0; $i < count($temperature); $i++) {
     $j = $i;
@@ -18,6 +17,12 @@ for ($i = 0; $i < count($temperature); $i++) {
         $temp[] = $temperature[$i];
     }
 }
+
+foreach ($temp as $key => $val) {
+    $temp_sum += $val;
+}
+
+$avg_temp = $temp_sum/count($temp);
 
 ?>
 <!DOCTYPE html>
